@@ -34,7 +34,7 @@ class Advertisement{
         if (pN_string[0] === '+') {
             return this.phoneNumber=pN_string;
         } else {
-            return console.log('Invalid Number!');
+            return 'Invalid Number!';
         }
     }
 
