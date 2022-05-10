@@ -1,45 +1,35 @@
 class Advertisement{
 
-    Advertisement;
-    createDate;
-    author;
-    text;
-    phoneNumber;
-    email;
-    isPrivate;
-    summ;
-    VAT;
-
     constructor () {
-        this.Advertisement=null;
-        this.createDate=null;
-        this.author=null;
-        this.text=null;
-        this.phoneNumber=null;
-        this.email=null;
-        this.isPrivate=null;
-        this.summ=null;
-        this.VAT=null;
+        this._Advertisement=null;
+        this._createDate=null;
+        this._author=null;
+        this._text=null;
+        this._phoneNumber=null;
+        this._email=null;
+        this._isPrivate=null;
+        this._summ=null;
+        this._VAT=null;
     }
 
     get phoneNumber() {
-        return this.phoneNumber;
+        return this._phoneNumber;
     }
 
     get author() {
-        return this.author;
+        return this._author;
     }
 
     set phoneNumber(pN_string) {
         if (pN_string[0] === '+') {
-            return this.phoneNumber=pN_string;
+            this._phoneNumber=pN_string;
         } else {
-            return 'Invalid Number!';
+            this._phoneNumber='Invalid Number!';
         }
     }
 
     set author(au_string) {
-        this.author=au_string;
+        this._author=au_string;
     }
 }
 
