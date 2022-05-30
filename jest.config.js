@@ -106,7 +106,14 @@ module.exports = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+   reporters: [ 
+    "default", 
+    ["jest-html-reporters", { 
+      "publicPath": "./html-report", 
+      "filename": "report.html", 
+      "openReport": false 
+    }] 
+  ], 
 
   // Automatically reset mock state before every test
   // resetMocks: false,

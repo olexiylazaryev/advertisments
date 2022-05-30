@@ -1,0 +1,44 @@
+openapi: '3.0.2'
+info:
+  title: Advertisements Base
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+tags:
+  - name: 'About Advertisements'
+  - name: 'About Owner'
+paths:
+  /adv:
+    put:
+      description: 'Create an Ad'
+      responses:
+        '201':
+          description: Created
+    post:
+      description: 'Post new Ad'
+      responses:
+        '201':
+          description: Created
+  /advs:
+    get:
+      description: 'Get all Ads'
+      responses:
+        '200':
+          description: OK
+  /advs/:id:
+      get:
+        description: 'Get Ad by ID'
+        responses:
+          '200':
+            description: OK
+      delete:
+        description: 'Delete Ad by ID'
+        responses:
+          '202':
+            description: Accepted
+  /adv/owner:
+    get:
+      description: 'Get Ads by Owner'
+      responses:
+        '200':
+          description: OK
