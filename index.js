@@ -19,6 +19,11 @@ function main() {
     app.listen(3000, () => {
         console.log('Express is running!');
     })
+
+    app.get('/advs', (req, res) => {
+        res.send('add1; add2; add3;');
+    })
+
 }
 
 if (require.main === module) {
