@@ -13,7 +13,9 @@ router.get('/advs', (req, res) => {
     res.send('add1; add2; add3;');
 })
 
-// TODO: add PUT /adv route
+router.put('/adv', (req, res) => {
+    res.send('Create an add');
+})
 
 // TODO: add GET /adv/:id route
 
@@ -21,6 +23,8 @@ router.get('/advs', (req, res) => {
 
 // TODO: add GET /adv/owner route
 
-// TODO: add DELETE /adv/:id route
+router.delete('/adv/:id', (req, res) => {
+    res.send('Delete an add by id');
+})
 
 module.exports = router;
