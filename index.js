@@ -1,5 +1,6 @@
-const Advertisment = require('./models/advertisement');
 const express = require('express');
+const Advertisment = require('./models/advertisement');
+const router = require("./routes/advertisments");
 const app = express();
 
 function main() {
@@ -8,32 +9,12 @@ function main() {
     console.log(Ad_test.phoneNumber);
     console.log(Ad_test.author = 'John Smith');
 
-    app.get('/', (req, res) => {
-        res.send('Express get request.');
-    })
+    const PORT = process.env.PORT || 3000;
+    app.use("", router);
 
-    app.get('/users', (req, res) => {
-        res.send('Express users get request.');
-    })
-
-    app.listen(3000, () => {
+    app.listen(PORT, () => {
         console.log('Express is running!');
     })
-
-    app.get('/advs', (req, res) => {
-        res.send('add1; add2; add3;');
-    })
-
-    // TODO: add PUT /adv route
-
-    // TODO: add GET /adv/:id route
-
-    // TODO: add POST /adv route
-
-    // TODO: add GET /adv/owner route
-
-    // TODO: add DELETE /adv/:id route
-
 }
 
 if (require.main === module) {
