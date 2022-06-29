@@ -17,10 +17,6 @@ router.put('/adv', (req, res) => {
     res.send('Create an add');
 })
 
-// TODO: add GET /adv/:id route
-
-// TODO: add POST /adv route
-
 // TODO: add GET /adv/owner route
 
 router.delete('/adv/:id', (req, res) => {
