@@ -21,6 +21,14 @@ router.post('/adv', (req, res) => {
     res.send('Post an add');
 })
 
+router.put('/adv', (req, res) => {
+    res.send('Create an add');
+})
+
 // TODO: add GET /adv/owner route
+
+router.delete('/adv/:id', (req, res) => {
+    res.send('Delete an add by id');
+})
 
 module.exports = router;
