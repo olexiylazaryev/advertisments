@@ -15,9 +15,13 @@ router.get('/advs', (req, res) => {
 
 // TODO: add PUT /adv route
 
-// TODO: add GET /adv/:id route
+router.get('/adv/:id', (req, res) => {
+    res.send('Get add by ID');
+})
 
-// TODO: add POST /adv route
+router.post('/adv', (req, res) => {
+    res.send('Post an add');
+})
 
 // TODO: add GET /adv/owner route
 
