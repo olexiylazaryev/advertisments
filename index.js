@@ -1,7 +1,10 @@
 const express = require('express');
 const Advertisment = require('./models/advertisement');
-const router = require("./routes/advertisments");
 const app = express();
+app.use(express.json());
+const router = require("./routes/advertisments");
+const routerFS = require("./routes/filesytem");
+
 
 function main() {
     const Ad_test = new Advertisment();
@@ -11,6 +14,7 @@ function main() {
 
     const PORT = process.env.PORT || 3000;
     app.use("", router);
+    app.use("/fs", routerFS);
 
     app.listen(PORT, () => {
         console.log('Express is running!');
